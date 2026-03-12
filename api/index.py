@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # הגדרת Gemini - המפתח יימשך מתוך הגדרות השרת (Environment Variables)
 genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
-model = genai.GenerativeModel('gemini-1.5-flash') # או הדגם הספציפי שברשותך
+model = genai.GenerativeModel("gemini-flash-latest")
 
 @app.route('/api', methods=['GET', 'POST'])
 def chat():
